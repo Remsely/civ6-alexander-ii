@@ -23,8 +23,7 @@ INSERT INTO CivilizationLeaders (CivilizationType, LeaderType, CapitalName) VALU
 
 --==========================================================================================================================
 -- ABILITY: The Great Reforms
--- Done: 3.1 Builder charges, Pasture production; 3.2 Zemstvo; 3.3 Military Reform.
--- TODO (docs/remselys-alexander-ii.md): 3.1 Farm adjacency (+1 Production per 3 adjacent Farms, max +2).
+-- Done: 3.1 Builder charges, Pasture production, Farm adjacency (Lua); 3.2 Zemstvo; 3.3 Military Reform.
 --==========================================================================================================================
 -- Modifiers
 -- Builder charges: same type as Qin's TRAIT_ADJUST_BUILDER_CHARGES
@@ -150,3 +149,35 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_ZEMSTVO_INFORMATION_LOYALTY'),
 		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_ZEMSTVO_FUTURE_CULTURE'),
 		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_ZEMSTVO_FUTURE_LOYALTY');
+
+--------------------------------------------------------------------------------------------------------------------------
+-- 3.1 Farm adjacency: +1 Production per 3 adjacent Farms (max +2). Counted by Lua/RemselysAlexanderII_Farms.lua, which sets the
+-- plot properties below; the modifiers only read them. Pattern: Sukritact's Al-Hasan (Jahazi) plot property + MODIFIER_PLAYER_ADJUST_PLOT_YIELD.
+--------------------------------------------------------------------------------------------------------------------------
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES
+		('REMSELY_REQUIRES_FARM_ADJ_3', 'REQUIREMENT_PLOT_PROPERTY_MATCHES'),
+		('REMSELY_REQUIRES_FARM_ADJ_6', 'REQUIREMENT_PLOT_PROPERTY_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
+		('REMSELY_REQUIRES_FARM_ADJ_3', 'PropertyName',    'REMSELY_FARM_ADJ_3'),
+		('REMSELY_REQUIRES_FARM_ADJ_3', 'PropertyMinimum', '1'),
+		('REMSELY_REQUIRES_FARM_ADJ_6', 'PropertyName',    'REMSELY_FARM_ADJ_6'),
+		('REMSELY_REQUIRES_FARM_ADJ_6', 'PropertyMinimum', '1');
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+		('REMSELY_PLOT_FARM_ADJ_3_REQUIREMENTS', 'REQUIREMENTSET_TEST_ALL'),
+		('REMSELY_PLOT_FARM_ADJ_6_REQUIREMENTS', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+		('REMSELY_PLOT_FARM_ADJ_3_REQUIREMENTS', 'REQUIRES_PLOT_HAS_FARM'),
+		('REMSELY_PLOT_FARM_ADJ_3_REQUIREMENTS', 'REMSELY_REQUIRES_FARM_ADJ_3'),
+		('REMSELY_PLOT_FARM_ADJ_6_REQUIREMENTS', 'REQUIRES_PLOT_HAS_FARM'),
+		('REMSELY_PLOT_FARM_ADJ_6_REQUIREMENTS', 'REMSELY_REQUIRES_FARM_ADJ_6');
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+		('REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'REMSELY_PLOT_FARM_ADJ_3_REQUIREMENTS'),
+		('REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'REMSELY_PLOT_FARM_ADJ_6_REQUIREMENTS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+		('REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION'),
+		('REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION', 'Amount',    '1'),
+		('REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION'),
+		('REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION', 'Amount',    '1');
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION'),
+		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION');
