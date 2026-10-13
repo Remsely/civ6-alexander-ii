@@ -5,10 +5,9 @@ description: Арт лидера-мода Civilization VI - портрет, ик
 
 # Арт лидера-мода
 
-Конвейер описан в `docs/art-pipeline.md`; здесь только то, что уже стоило нам итераций.
+Порядок сборки (slice_art -> make_art -> BLP вручную -> install) описан в `docs/art-pipeline.md`, повторять его здесь не нужно; ниже только то, что уже стоило нам итераций.
 
-## Порядок
-`art/source/*.png` -> `tools/slice_art.py` (art/build) -> `tools/make_art.py` (Textures, XLPs, ArtDefs, .dep, Data/Icons.sql) -> **BLP вручную в Asset Editor** (положить в `Platforms/Windows/BLPs/`) -> `tools/install.py` -> перезапуск игры. BLP (формат CIVBLP) собрать скриптом нельзя; после любой смены картинки их нужно пересобрать. Наличие записей в BLP можно проверить grep по строкам (имена текстур).
+После любой смены картинки BLP нужно пересобрать вручную (скриптом формат CIVBLP не собрать). Наличие записей в BLP проверяется grep по строкам (имена текстур).
 
 ## Грабли
 - **Имена текстур** (верхний регистр): `<LEADER>_NEUTRAL` (портрет и экран загрузки), `<LEADER>_SELECT` (карточка выбора, `Players.Portrait`), `<LEADER>_BACKGROUND` (`LoadingInfo.BackgroundImage`), `FALLBACK_NEUTRAL_<LEADER>`, иконки `<Mod>Icon<размер>`.

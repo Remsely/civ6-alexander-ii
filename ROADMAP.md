@@ -78,24 +78,27 @@
 /
 ├── ROADMAP.md
 ├── CLAUDE.md                    # правила для Claude Code (раздел 4)
-├── README.md                    # описание мода для GitHub
+├── README.md  CHANGELOG.md  VERSION
 ├── docs/
 │   ├── remselys-alexander-ii.md # дизайн-документ
 │   ├── art-pipeline.md          # как собирается арт
+│   ├── RELEASING.md  TESTING.md # выпуск релиза, проверка в игре
 │   └── terms.md                 # русские термины
+├── .claude/skills/              # скиллы проекта (грабли и правила, без дублей docs/)
+├── workshop/                    # страница, настройки и превью Steam Workshop
 ├── RemselysAlexanderII.modinfo
 ├── RemselysAlexanderII.dep      # арт-зависимости (для Asset Editor и UpdateArt)
 ├── Data/                        # SQL геймплея, иконки, цвета
 ├── Text/                        # en_US.xml, ru_RU.xml
 ├── Lua/
 ├── ArtDefs/  XLPs/  Textures/   # DDS/TEX/XLP/artdef: генерирует tools/make_art.py
-├── Platforms/Windows/BLPs/      # собранные в Asset Editor BLP
+├── Platforms/{Windows,MacOS}/BLPs/ # собранные в Asset Editor BLP
 ├── art/
 │   ├── source/                  # исходники из нейросетей
 │   └── prompts.md               # промпты для нейросетей
 ├── tools/
-│   ├── validate.py  install.py
-│   ├── slice_art.py  make_art.py
+│   ├── validate.py  install.py  package.py
+│   ├── slice_art.py  make_art.py  make_preview.py
 │   └── requirements.txt
 └── reference/                   # в .gitignore: файлы игры, sqlite, образцы
 ```
@@ -147,11 +150,11 @@
 3. [x] **Портрет для дипломатии** (fallback) по размерам ванильных fallback-изображений. 🤖 убрать фон (`rembg`), подогнать холст.
 4. [x] **Иконка лидера**: крупный план лица из эталона. 🤖 `tools/slice_art.py` режет во все размеры из образца.
 5. [x] **Фон экрана загрузки**: композиция A или B из раздела 8 дизайн-документа (кабинет в Зимнем дворце / Дворцовая площадь зимой).
-6. [ ] **Превью для Workshop.**
+6. [x] **Превью для Workshop** (`tools/make_preview.py`).
 7. [x] 🧑 Asset Editor: импорт текстур, классы `UserInterface` / `LeaderFallback`, сборка BLP. 🤖 `tools/make_art.py` заранее готовит `.xlp`, `.artdef`, `.dep`, DDS и `.tex` по образцу (см. `docs/art-pipeline.md`).
 
 ### Фаза 5. Тексты (🤖 черновик, 🧑 вычитка)
-- [ ] Реплики дипломатии, Цивилопедия, цитата экрана загрузки, описание для Workshop.
+- [x] Реплики дипломатии, Цивилопедия, абзац экрана загрузки, описание мода и страницы Workshop. Цитата не добавлена: нет сверки с печатными источниками.
 - [ ] Вычитать русский вариант: стиль ванильной локализации, официальные термины.
 
 ### Фаза 6. Полировка и релиз
@@ -159,7 +162,7 @@
 - [ ] Партия с R&F без GS и с GS (эпоха «Будущее» только в GS).
 - [ ] Сохранение и загрузка, переключение языка.
 - [ ] 🧑 Публикация в Steam Workshop через ModBuddy / Uploader.
-- [ ] Тег версии в git, CHANGELOG.
+- [x] Тег версии в git, CHANGELOG (v1.0.0-alpha, пре-релиз на GitHub).
 
 ### Фаза 7 (*). 3D-сцена
 Отложено до релиза.

@@ -19,14 +19,15 @@
 `.blp` собирает только Asset Editor / ModBuddy (cooking). Без них не работают портрет (экран выбора лидера и загрузки) и fallback (дипломатия). Иконки лидера грузятся прямо из `.dds` через `Data/Icons.sql` и работают без BLP.
 
 Нужные результаты:
-- `Platforms/Windows/BLPs/UI/Icons.blp` (из `XLPs/Icons.xlp`)
-- `Platforms/Windows/BLPs/LeaderFallbacks.blp` (из `XLPs/LeaderFallbacks.xlp`)
+- `Platforms/{Windows,MacOS}/BLPs/UI/Icons.blp` (из `XLPs/Icons.xlp`)
+- `Platforms/{Windows,MacOS}/BLPs/LeaderFallbacks.blp` (из `XLPs/LeaderFallbacks.xlp`)
 
 Ориентир по структуре - `reference/samples/JFD-Russia-Elisabeth`.
 
-## После получения BLP
+## Подключение арта (для Александра II уже сделано)
 
-1. Добавить в `.modinfo`: действия `UpdateArt` (файл `RemselysAlexanderII.dep`) во FrontEnd и InGame, в `<Files>` - `ArtDefs/*`, `.dep`, `XLPs/*`, `Textures/*.tex`, BLP (Windows и MacOS).
-2. `Data/Config.sql`: `Portrait` = `LEADER_REMSELY_ALEXANDER_II_NEUTRAL`.
-3. `Data/GameDefines.sql`: `LoadingInfo.ForegroundImage` = `LEADER_REMSELY_ALEXANDER_II_NEUTRAL`.
-4. `validate.py`, `install.py`, перезапуск игры, проверка: выбор лидера, загрузка, дипломатия.
+1. `.modinfo`: действия `UpdateArt` (файл `RemselysAlexanderII.dep`) во FrontEnd и InGame; в `<Files>` - `ArtDefs/*`, `.dep`, `XLPs/*`, `Textures/*.tex`, BLP (Windows и MacOS).
+2. `Data/Config.sql`: `Players.Portrait` и `PortraitBackground`; `Data/GameDefines.sql`: `LoadingInfo`.
+3. `validate.py`, `install.py`, перезапуск игры, проверка: выбор лидера, загрузка, дипломатия.
+
+Размеры кадров, имена текстур и грабли экранов - в скилле `civ6-leader-art`.
