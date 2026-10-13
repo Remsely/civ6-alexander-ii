@@ -4,11 +4,12 @@
     <Replace Tag="LOC_LEADER_REMSELY_ALEXANDER_II_NAME" Language="en_US">
       <Text>Alexander II</Text>
     </Replace>
-    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ZEMSTVO_NAME" Language="en_US">
-      <Text>Zemstvo</Text>
+    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS_NAME" Language="en_US">
+      <Text>The Great Reforms</Text>
     </Replace>
-    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ZEMSTVO_DESCRIPTION" Language="en_US">
-      <Text>Placeholder. The leader ability will be added later.</Text>
+    <!-- Farm adjacency is not implemented yet; add its line after the Pasture line when it is -->
+    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS_DESCRIPTION" Language="en_US">
+      <Text>Builders have +1 charge.[NEWLINE][NEWLINE]Pastures get +1 [ICON_Production] Production.[NEWLINE][NEWLINE]Cities with an assigned Governor get [ICON_Culture] Culture and Loyalty: +2 Culture and +4 Loyalty in the Ancient and Classical Eras, +3 Culture and +6 Loyalty in the Medieval Era, +4 Culture and +7 Loyalty in the Renaissance Era, +5 Culture and +8 Loyalty in the Industrial Era, +6 Culture and +9 Loyalty in the Modern Era, +7 Culture and +10 Loyalty in the Atomic Era, +8 Culture and +11 Loyalty in the Information Era, +9 Culture and +12 Loyalty in the Future Era.[NEWLINE][NEWLINE]Unit upgrades cost 50% less [ICON_Gold] Gold.</Text>
     </Replace>
     <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_DESCRIPTION" Language="en_US">
       <Text>Adds Alexander II as an alternative leader of Russia.</Text>

@@ -6,11 +6,11 @@
       <Gender>masculine</Gender>
       <Plurality>1</Plurality>
     </Replace>
-    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ZEMSTVO_NAME" Language="ru_RU">
-      <Text>Земства</Text>
+    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS_NAME" Language="ru_RU">
+      <Text>Великие реформы</Text>
     </Replace>
-    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ZEMSTVO_DESCRIPTION" Language="ru_RU">
-      <Text>Заглушка. Способность лидера будет добавлена позже.</Text>
+    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS_DESCRIPTION" Language="ru_RU">
+      <Text>Строители получают +1 заряд.[NEWLINE][NEWLINE]Пастбища дают +1 [ICON_Production] производства.[NEWLINE][NEWLINE]Города с назначенным губернатором получают [ICON_Culture] культуру и лояльность: +2 культуры и +4 лояльности в Древности и Классическую эпоху, +3 культуры и +6 лояльности в Средневековье, +4 культуры и +7 лояльности в Возрождение, +5 культуры и +8 лояльности в Индустриальную эпоху, +6 культуры и +9 лояльности в Современную эпоху, +7 культуры и +10 лояльности в Атомную эпоху, +8 культуры и +11 лояльности в Информационную эпоху, +9 культуры и +12 лояльности в эпоху Будущего.[NEWLINE][NEWLINE]Улучшение юнитов стоит на 50% меньше [ICON_Gold] золота.</Text>
     </Replace>
     <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_DESCRIPTION" Language="ru_RU">
       <Text>Добавляет Александра II как альтернативного лидера России.</Text>
