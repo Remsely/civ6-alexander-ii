@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <Replace Tag="LOC_LEADER_REMSELY_ALEXANDER_II_NAME" Language="ru_RU">
+      <Text>Александр II|Александра II|Александру II|Александра II|Александром II|Александре II</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ZEMSTVO_NAME" Language="ru_RU">
+      <Text>Земства</Text>
+    </Replace>
+    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ZEMSTVO_DESCRIPTION" Language="ru_RU">
+      <Text>Заглушка. Способность лидера будет добавлена позже.</Text>
+    </Replace>
+    <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_DESCRIPTION" Language="ru_RU">
+      <Text>Добавляет Александра II как альтернативного лидера России.</Text>
+    </Replace>
+    <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_TEASER" Language="ru_RU">
+      <Text>Александр II для России.</Text>
+    </Replace>
+  </LocalizedText>
+</GameData>

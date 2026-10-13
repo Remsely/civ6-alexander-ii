@@ -1,0 +1,5 @@
+* text=auto
+*.dds binary
+*.tex binary
+*.blp binary
+*.png binary

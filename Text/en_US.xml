@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <Replace Tag="LOC_LEADER_REMSELY_ALEXANDER_II_NAME" Language="en_US">
+      <Text>Alexander II</Text>
+    </Replace>
+    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ZEMSTVO_NAME" Language="en_US">
+      <Text>Zemstvo</Text>
+    </Replace>
+    <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ZEMSTVO_DESCRIPTION" Language="en_US">
+      <Text>Placeholder. The leader ability will be added later.</Text>
+    </Replace>
+    <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_DESCRIPTION" Language="en_US">
+      <Text>Adds Alexander II as an alternative leader of Russia.</Text>
+    </Replace>
+    <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_TEASER" Language="en_US">
+      <Text>Alexander II for Russia.</Text>
+    </Replace>
+  </LocalizedText>
+</GameData>
