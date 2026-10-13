@@ -189,8 +189,26 @@ def check_loc_refs(actions, mod_tags):
             err(f"loc: {rel} references {ref}, defined neither in the mod nor in the game")
 
 
+COLOR_ATLAS = ROOT / "reference" / "vanilla" / "Base" / "UI" / "Civ6_ColorAtlas.xml"
+COLOR_TAG = re.compile(r"\[COLOR_([A-Za-z0-9_]+)\]")
+
+
+def check_text_colors(files):
+    """[COLOR_X] in text resolves only against Civ6_ColorAtlas.xml (COLOR_FLOAT_GOLD, COLOR_LIGHTBLUE, ...). Names from the player
+    palette (COLOR_STANDARD_ORANGE_MD) are not text colors: the game renders such text invisible."""
+    if not COLOR_ATLAS.is_file():
+        return
+    known = {e.get("Name") for e in etree.parse(str(COLOR_ATLAS)).iter("Color", "ColorSet")}
+    sources = [MODINFO, *(ROOT / f for f in files if f.endswith(".xml"))]
+    for path in sources:
+        for name in sorted(set(COLOR_TAG.findall(path.read_text(encoding="utf-8")))):
+            if f"COLOR_{name}" not in known:
+                err(f"text color: [COLOR_{name}] in {path.name} is not in Civ6_ColorAtlas.xml (invisible in game)")
+
+
 def main() -> int:
     files, actions = load_modinfo()
+    check_text_colors(files)
     check_files(files, actions)
     check_sql(actions)
     mod_tags = check_text(files)

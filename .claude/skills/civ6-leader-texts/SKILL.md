@@ -14,7 +14,7 @@ description: Тексты лидера-мода Civilization VI на англи�
 - Способность и повестка: `LOC_TRAIT_LEADER_*_NAME/DESCRIPTION`, `LOC_AGENDA_*_NAME/DESCRIPTION`, тексты модификаторов повестки (`LOC_DIPLO_MODIFIER_*`).
 - Дипломатия: набор тегов должен покрывать **все ванильные ключи реплик** лидера-образца (у Петра их 33); сверяй по базе, не по памяти.
 - Города: `LOC_CITY_NAME_*` и `CityNames` с `LeaderType` (привязка списка к лидеру в игре не проверена).
-- Описание и тизер мода: `LOC_<MOD>_MOD_DESCRIPTION/TEASER`. Имя в `.modinfo` можно красить `[COLOR_STANDARD_ORANGE_MD]...[ENDCOLOR]`.
+- Описание и тизер мода: `LOC_<MOD>_MOD_DESCRIPTION/TEASER`. Имя в `.modinfo` можно красить `[COLOR_...]...[ENDCOLOR]`, но только цветами из `Civ6_ColorAtlas.xml` (`COLOR_LIGHTBLUE`, `COLOR_FLOAT_GOLD`, `COLOR_FLOAT_SCIENCE`...). Цвета палитры игроков (`COLOR_STANDARD_ORANGE_MD`) в тексте дают невидимые буквы; валидатор это ловит. `COLOR_FLOAT_GOLD` занят JFD, у нас `COLOR_LIGHTBLUE`.
 
 ## Правила
 - Без буквы «ё» (как в официальном тексте); префикс `REMSELY` у каждого тега (проверяет валидатор).
