@@ -10,13 +10,125 @@
       <Text>Великие реформы</Text>
     </Replace>
     <Replace Tag="LOC_TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS_DESCRIPTION" Language="ru_RU">
-      <Text>Строители получают +1 [ICON_Charges] заряд. Пастбища дают +1 [ICON_Production] производства. Фермы дают +1 [ICON_Production] производства за каждые 3 соседние фермы (максимум +2).[NEWLINE][NEWLINE]Города с назначенным [ICON_Governor] губернатором получают [ICON_Culture] культуру и [ICON_PressureUp] лояльность: +2 [ICON_Culture] культуры и +4 [ICON_PressureUp] лояльности в Древности и Классическую эпоху, +3 [ICON_Culture] культуры и +6 [ICON_PressureUp] лояльности в Средневековье, +4 [ICON_Culture] культуры и +7 [ICON_PressureUp] лояльности в Возрождение, +5 [ICON_Culture] культуры и +8 [ICON_PressureUp] лояльности в Индустриальную эпоху, +6 [ICON_Culture] культуры и +9 [ICON_PressureUp] лояльности в Современную эпоху, +7 [ICON_Culture] культуры и +10 [ICON_PressureUp] лояльности в Атомную эпоху, +8 [ICON_Culture] культуры и +11 [ICON_PressureUp] лояльности в Информационную эпоху, +9 [ICON_Culture] культуры и +12 [ICON_PressureUp] лояльности в эпоху Будущего.[NEWLINE][NEWLINE]Улучшение юнитов стоит на 50% меньше [ICON_Gold] золота.</Text>
+      <Text>Освобождение крестьян: строители получают +1 [ICON_Charges] заряд. Пастбища дают +1 [ICON_Production] производства. Фермы дают +1 [ICON_Production] производства за каждые 3 соседние фермы (максимум +2).[NEWLINE][NEWLINE]Земства: города с назначенным [ICON_Governor] губернатором получают [ICON_Culture] культуру и [ICON_PressureUp] лояльность: +2 [ICON_Culture] культуры и +4 [ICON_PressureUp] лояльности в Древности и Классическую эпоху, +3 [ICON_Culture] культуры и +6 [ICON_PressureUp] лояльности в Средневековье, +4 [ICON_Culture] культуры и +7 [ICON_PressureUp] лояльности в Возрождение, +5 [ICON_Culture] культуры и +8 [ICON_PressureUp] лояльности в Индустриальную эпоху, +6 [ICON_Culture] культуры и +9 [ICON_PressureUp] лояльности в Современную эпоху, +7 [ICON_Culture] культуры и +10 [ICON_PressureUp] лояльности в Атомную эпоху, +8 [ICON_Culture] культуры и +11 [ICON_PressureUp] лояльности в Информационную эпоху, +9 [ICON_Culture] культуры и +12 [ICON_PressureUp] лояльности в эпоху Будущего.[NEWLINE][NEWLINE]Военная реформа: улучшение юнитов стоит на 50% меньше [ICON_Gold] золота.</Text>
+    </Replace>
+    <Replace Tag="LOC_AGENDA_REMSELY_LIBERATOR_NAME" Language="ru_RU">
+      <Text>Освободитель</Text>
+    </Replace>
+    <Replace Tag="LOC_AGENDA_REMSELY_LIBERATOR_DESCRIPTION" Language="ru_RU">
+      <Text>Ему нравятся цивилизации, давно не объявлявшие войн. Не нравятся те, что объявили войну недавно.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MODIFIER_REMSELY_LIBERATOR_PEACE" Language="ru_RU">
+      <Text>Александр II ценит, что вы давно сохраняете мир</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MODIFIER_REMSELY_LIBERATOR_WAR" Language="ru_RU">
+      <Text>Александр II недоволен тем, что вы недавно объявили войну</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_KUDO_LEADER_REMSELY_ALEXANDER_II_REASON_ANY" Language="ru_RU">
+      <Text>(Вы поддерживаете мир)</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_WARNING_LEADER_REMSELY_ALEXANDER_II_REASON_ANY" Language="ru_RU">
+      <Text>(Вы недавно объявили войну)</Text>
     </Replace>
     <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_DESCRIPTION" Language="ru_RU">
       <Text>Добавляет Александра II как альтернативного лидера России.</Text>
     </Replace>
     <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_TEASER" Language="ru_RU">
       <Text>Александр II для России.</Text>
+    </Replace>
+    <!-- Diplomacy lines: DRAFT, to be proofread (ROADMAP phase 5) -->
+    <Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Благодарю. Россия ценит такую дружбу.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Я принимаю ваше предложение дружбы. Пусть она послужит обоим нашим народам.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Ваша делегация желанный гость. Мы примем ее с подобающими почестями.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Разумно. Будем считать дело решенным.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Наши границы открыты для вас. Пусть процветают торговля и путешествия.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Россия была бы рада считать вас другом. Объявим ли мы об этом?</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Я стремился сохранить мир, но вы не оставили мне выбора. Россия будет защищать свои интересы.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Я долго искал мира. Теперь его нет, и вина лежит на вас.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Империя пала, но дело преобразований меня переживет.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Империя пала, но дело преобразований меня переживет.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Я направил к вам делегацию с дарами России.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Ваши действия недостойны великой державы. Россия этого не забудет. (Осуждает вас)</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Вы вправе так считать. Время рассудит.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Император Всероссийский приветствует вас. Надеюсь, наши державы найдут общий язык.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Благодарю. Хорошее начало.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Расскажите о вашей стране. Россия огромна, и нам есть чему поучиться друг у друга.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Посетите наш ближайший город и увидите, как меняется Россия.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_GREETING_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Рад вас видеть. Россия желает мира и добрых дел.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Ваше государство хорошо управляется. Такой порядок служит народу.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Хотите ли вы заключить союз?</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Мир - лучший путь. Я согласен.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Пока нет. Эта война не окончена.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Довольно крови. Заключим мир.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Позволите ли вы нашим людям и товарам пересекать ваши земли?</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Жаль.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Не могу принять это сейчас. Возможно, позже.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Сейчас - нет.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Нет. Время для этого еще не пришло.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Мы не готовы открыть наши границы.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Вы развязали войну, и я не могу этого не заметить. Россия помнит.</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
+      <Text>Отведите ваши войска от наших границ. Не искушайте меня.</Text>
     </Replace>
   </LocalizedText>
 </GameData>

@@ -181,3 +181,50 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION'),
 		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION');
+
+--==========================================================================================================================
+-- AGENDA: The Liberator (docs/remselys-alexander-ii.md, 4)
+-- Likes civilizations that keep the peace, dislikes those that recently declared war. XML only (first version).
+-- Patterns: AGENDA_PEACEKEEPER (Gandhi: not-warmonger like) and AGENDA_BACKSTAB_AVERSE (Tomyris: fading penalty for a declared war).
+-- Like:    requirement set PLAYER_NOT_WARMONGER_SUBJECT; starts at +2, +1 every 10 turns, up to +5 (about 30 turns of peace).
+-- Dislike: requirement set PLAYER_DECLARES_WAR; starts at -6 and fades by 1 every 5 turns (about 30 turns).
+--==========================================================================================================================
+INSERT INTO Types (Type, Kind) VALUES
+		('TRAIT_AGENDA_REMSELY_LIBERATOR', 'KIND_TRAIT');
+
+INSERT INTO Agendas (AgendaType, Name, Description) VALUES
+		('AGENDA_REMSELY_LIBERATOR', 'LOC_AGENDA_REMSELY_LIBERATOR_NAME', 'LOC_AGENDA_REMSELY_LIBERATOR_DESCRIPTION');
+
+INSERT INTO Traits (TraitType) VALUES
+		('TRAIT_AGENDA_REMSELY_LIBERATOR');
+
+INSERT INTO AgendaTraits (AgendaType, TraitType) VALUES
+		('AGENDA_REMSELY_LIBERATOR', 'TRAIT_AGENDA_REMSELY_LIBERATOR');
+
+INSERT INTO HistoricalAgendas (LeaderType, AgendaType) VALUES
+		('LEADER_REMSELY_ALEXANDER_II', 'AGENDA_REMSELY_LIBERATOR');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+		('REMSELY_LIBERATOR_PEACE', 'MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER', 'PLAYER_NOT_WARMONGER_SUBJECT'),
+		('REMSELY_LIBERATOR_WAR',   'MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER', 'PLAYER_DECLARES_WAR');
+
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+		('REMSELY_LIBERATOR_PEACE', 'InitialValue',   '2'),
+		('REMSELY_LIBERATOR_PEACE', 'IncrementTurns', '10'),
+		('REMSELY_LIBERATOR_PEACE', 'IncrementValue', '1'),
+		('REMSELY_LIBERATOR_PEACE', 'MaxValue',       '5'),
+		('REMSELY_LIBERATOR_PEACE', 'SimpleModifierDescription', 'LOC_DIPLO_MODIFIER_REMSELY_LIBERATOR_PEACE'),
+		('REMSELY_LIBERATOR_PEACE', 'StatementKey',   'LOC_DIPLO_KUDO_LEADER_REMSELY_ALEXANDER_II_REASON_ANY'),
+		('REMSELY_LIBERATOR_WAR',   'InitialValue',   '-6'),
+		('REMSELY_LIBERATOR_WAR',   'ReductionTurns', '5'),
+		('REMSELY_LIBERATOR_WAR',   'ReductionValue', '-1'),
+		('REMSELY_LIBERATOR_WAR',   'SimpleModifierDescription', 'LOC_DIPLO_MODIFIER_REMSELY_LIBERATOR_WAR'),
+		('REMSELY_LIBERATOR_WAR',   'StatementKey',   'LOC_DIPLO_WARNING_LEADER_REMSELY_ALEXANDER_II_REASON_ANY');
+
+INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
+		('REMSELY_LIBERATOR_PEACE', 'Sample', 'LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL'),
+		('REMSELY_LIBERATOR_WAR',   'Sample', 'LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+		('TRAIT_AGENDA_REMSELY_LIBERATOR', 'REMSELY_LIBERATOR_PEACE'),
+		('TRAIT_AGENDA_REMSELY_LIBERATOR', 'REMSELY_LIBERATOR_WAR');
