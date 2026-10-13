@@ -19,7 +19,7 @@ INSERT INTO LoadingInfo (LeaderType, ForegroundImage, BackgroundImage, PlayDawnO
 		('LEADER_REMSELY_ALEXANDER_II', 'LEADER_PETER_GREAT_NEUTRAL', 'LEADER_PETER_GREAT_BACKGROUND', 0);
 
 INSERT INTO CivilizationLeaders (CivilizationType, LeaderType, CapitalName) VALUES
-		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', 'LOC_CITY_NAME_MOSCOW');
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', 'LOC_CITY_NAME_ST_PETERSBURG');
 
 --==========================================================================================================================
 -- ABILITY: The Great Reforms
@@ -228,3 +228,22 @@ INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 		('TRAIT_AGENDA_REMSELY_LIBERATOR', 'REMSELY_LIBERATOR_PEACE'),
 		('TRAIT_AGENDA_REMSELY_LIBERATOR', 'REMSELY_LIBERATOR_WAR');
+--==========================================================================================================================
+-- CITY NAMES (docs/remselys-alexander-ii.md, 5): only the names the vanilla Russia list lacks (the 19th-century foundations);
+-- the capital is the vanilla St. Petersburg (CivilizationLeaders). Leader-specific list via CityNames.LeaderType (the column exists in the
+-- schema; no vanilla row uses it, but published mods do: Sukritact's Senusret III for vanilla Egypt, Italy Lorenzo, Leopold II).
+-- SortIndex -1 puts the leader's names ahead of the civilization-wide list, as in those mods.
+-- Verify in game that other Russian leaders are unaffected.
+--==========================================================================================================================
+INSERT INTO CityNames (CivilizationType, LeaderType, SortIndex, CityName) VALUES
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_ODESSA'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_SEVASTOPOL'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_VLADIVOSTOK'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_KHABAROVSK'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_BLAGOVESHCHENSK'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_TASHKENT'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_SAMARKAND'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_VERNY'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_NOVOROSSIYSK'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_NOVO_ARKHANGELSK'),
+		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', -1, 'LOC_CITY_NAME_REMSELY_TOMSK');

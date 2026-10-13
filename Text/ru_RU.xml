@@ -130,5 +130,61 @@
     <Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
       <Text>Отведите ваши войска от наших границ. Не искушайте меня.</Text>
     </Replace>
+    <!-- City names that vanilla lacks (docs/remselys-alexander-ii.md, 5) -->
+    <Replace Tag="LOC_CITY_NAME_REMSELY_ODESSA" Language="ru_RU">
+      <Text>Одесса|Одессы|Одессе|Одессу|Одессой|Одессе</Text>
+      <Gender>feminine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_SEVASTOPOL" Language="ru_RU">
+      <Text>Севастополь|Севастополя|Севастополю|Севастополь|Севастополем|Севастополе</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_VLADIVOSTOK" Language="ru_RU">
+      <Text>Владивосток|Владивостока|Владивостоку|Владивосток|Владивостоком|Владивостоке</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_KHABAROVSK" Language="ru_RU">
+      <Text>Хабаровск|Хабаровска|Хабаровску|Хабаровск|Хабаровском|Хабаровске</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_BLAGOVESHCHENSK" Language="ru_RU">
+      <Text>Благовещенск|Благовещенска|Благовещенску|Благовещенск|Благовещенском|Благовещенске</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_TASHKENT" Language="ru_RU">
+      <Text>Ташкент|Ташкента|Ташкенту|Ташкент|Ташкентом|Ташкенте</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_SAMARKAND" Language="ru_RU">
+      <Text>Самарканд|Самарканда|Самарканду|Самарканд|Самаркандом|Самарканде</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_VERNY" Language="ru_RU">
+      <Text>Верный|Верного|Верному|Верный|Верным|Верном</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_NOVOROSSIYSK" Language="ru_RU">
+      <Text>Новороссийск|Новороссийска|Новороссийску|Новороссийск|Новороссийском|Новороссийске</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_NOVO_ARKHANGELSK" Language="ru_RU">
+      <Text>Ново-Архангельск|Ново-Архангельска|Ново-Архангельску|Ново-Архангельск|Ново-Архангельском|Ново-Архангельске</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_TOMSK" Language="ru_RU">
+      <Text>Томск|Томска|Томску|Томск|Томском|Томске</Text>
+      <Gender>masculine</Gender>
+      <Plurality>1</Plurality>
+    </Replace>
   </LocalizedText>
 </GameData>

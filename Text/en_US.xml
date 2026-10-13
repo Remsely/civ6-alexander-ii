@@ -128,5 +128,39 @@
     <Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_REMSELY_ALEXANDER_II_ANY" Language="en_US">
       <Text>Withdraw your troops from our borders. Do not provoke me.</Text>
     </Replace>
+    <!-- City names that vanilla lacks (docs/remselys-alexander-ii.md, 5) -->
+    <Replace Tag="LOC_CITY_NAME_REMSELY_ODESSA" Language="en_US">
+      <Text>Odessa</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_SEVASTOPOL" Language="en_US">
+      <Text>Sevastopol</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_VLADIVOSTOK" Language="en_US">
+      <Text>Vladivostok</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_KHABAROVSK" Language="en_US">
+      <Text>Khabarovsk</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_BLAGOVESHCHENSK" Language="en_US">
+      <Text>Blagoveshchensk</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_TASHKENT" Language="en_US">
+      <Text>Tashkent</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_SAMARKAND" Language="en_US">
+      <Text>Samarkand</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_VERNY" Language="en_US">
+      <Text>Verny</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_NOVOROSSIYSK" Language="en_US">
+      <Text>Novorossiysk</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_NOVO_ARKHANGELSK" Language="en_US">
+      <Text>Novo-Arkhangelsk</Text>
+    </Replace>
+    <Replace Tag="LOC_CITY_NAME_REMSELY_TOMSK" Language="en_US">
+      <Text>Tomsk</Text>
+    </Replace>
   </LocalizedText>
 </GameData>
