@@ -29,10 +29,10 @@
       <Text>(You recently declared war)</Text>
     </Replace>
     <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_DESCRIPTION" Language="en_US">
-      <Text>Adds Alexander II as an alternative leader of Russia.</Text>
+      <Text>Adds Alexander II as an alternate leader of Russia: the Tsar-Liberator who abolished serfdom.[NEWLINE][NEWLINE]THE GREAT REFORMS[NEWLINE][ICON_BULLET] Emancipation of the Serfs: Builders have +1 charge, Pastures get +1 Production, Farms get +1 Production for every 2 adjacent Farms.[NEWLINE][ICON_BULLET] Zemstvo Reform: Cities with an assigned Governor get +2 Culture and +4 Loyalty; starting with the Medieval Era the bonus grows by +1 Culture and +2 Loyalty with every new era.[NEWLINE][ICON_BULLET] Military Reform: Unit upgrades cost 50% less Gold.[NEWLINE][NEWLINE]AGENDA: THE LIBERATOR[NEWLINE]Likes civilizations that have kept the peace for a long time. Dislikes those that recently declared war.[NEWLINE][NEWLINE]INCLUDED[NEWLINE][ICON_BULLET] 11 new Russian city names, the capital is Saint Petersburg[NEWLINE][ICON_BULLET] Portrait, icon, loading screen and diplomacy backgrounds[NEWLINE][ICON_BULLET] 31 diplomacy lines and a Civilopedia page[NEWLINE][ICON_BULLET] English and Russian text[NEWLINE][NEWLINE]Requires Rise and Fall; Gathering Storm is recommended (the Future Era). The leader plays as Russia.[NEWLINE][NEWLINE]Author: Remsely. Made with Claude Code (Anthropic).</Text>
     </Replace>
     <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_TEASER" Language="en_US">
-      <Text>Alexander II for Russia.</Text>
+      <Text>Alexander II, the Tsar-Liberator, for Russia: Great Reforms, agenda, cities, diplomacy lines and art.</Text>
     </Replace>
     <!-- Diplomacy lines: DRAFT, to be proofread (ROADMAP phase 5) -->
     <Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="en_US">
@@ -161,6 +161,36 @@
     </Replace>
     <Replace Tag="LOC_CITY_NAME_REMSELY_TOMSK" Language="en_US">
       <Text>Tomsk</Text>
+    </Replace>
+    <Replace Tag="LOC_LOADING_INFO_LEADER_REMSELY_ALEXANDER_II" Language="en_US">
+      <Text>Welcome to the Winter Palace, Tsar Alexander. Your empire is vast and its burdens are old: the serfs wait for freedom, the provinces for self-government, the army for reform. Free your peasants, let the Zemstvos govern the land, and Russia will grow strong from within.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_TITLE" Language="en_US">
+      <Text>Alexander II</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_SUBTITLE" Language="en_US">
+      <Text>Emperor and Autocrat of All Russia, Tsar of Poland, Grand Duke of Finland</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_CAPSULE_BODY" Language="en_US">
+      <Text>Alexander's Russia is a patient builder of the home front. His Builders do more, his Farms and Pastures grow productive, and every Governor brings Culture and Loyalty to the city they serve.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_DETAILED_BODY" Language="en_US">
+      <Text>Alexander's bonuses reward a wide, well-governed empire. Builders get an extra [ICON_Charges] charge, Pastures yield more [ICON_Production] Production, and Farms grouped together add still more. Assign a [ICON_Governor] Governor to a city and the Zemstvo reform gives it [ICON_Culture] Culture and [ICON_PressureUp] Loyalty that grow with every era from the Medieval Era on, so even frontier cities stay stable. Upgrading units costs half as much [ICON_Gold] Gold, which keeps an old army modern without ruining the treasury. His agenda, The Liberator, makes other leaders like rulers who keep the peace and dislike those who recently declared war.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_1" Language="en_US">
+      <Text>Alexander II (1818-1881) became Emperor of Russia in 1855, in the middle of the Crimean War. The defeat showed that the empire, vast but backward, could not keep its place in Europe without deep change. The reforms that followed earned him the name of the Tsar Liberator.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_2" Language="en_US">
+      <Text>The greatest of them was the Manifesto of 19 February 1861, which freed more than twenty million peasants from serfdom. Freedom came with redemption payments and many limits, and the peasants were far from satisfied, but it opened the way to a new Russia.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_3" Language="en_US">
+      <Text>The reforms that followed reshaped the state itself. In 1864 the zemstvos gave provinces and districts elected local self-government, and a new judicial system brought open courts and trial by jury. In 1874 the military reform of Dmitry Milyutin introduced universal conscription and modernized the army.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_4" Language="en_US">
+      <Text>Abroad, Alexander ended the long Caucasian War in 1864 and pushed the borders of the empire into Central Asia, taking Tashkent and Samarkand. In 1867 he sold Russian America, Alaska, to the United States for 7.2 million dollars. The war with the Ottoman Empire in 1877-1878 freed Bulgaria, although the Congress of Berlin took back much of what Russia had won.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_5" Language="en_US">
+      <Text>His reforms did not satisfy everyone. The Polish uprising of 1863 was crushed, and a growing revolutionary movement turned to terror. Alexander survived several attempts on his life. On 13 March 1881 (1 March in the old style) a bomb thrown by members of the People's Will fatally wounded him in Saint Petersburg, and the throne passed to his son Alexander III.</Text>
     </Replace>
   </LocalizedText>
 </GameData>

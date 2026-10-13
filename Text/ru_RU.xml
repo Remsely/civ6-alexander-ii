@@ -31,10 +31,10 @@
       <Text>(Вы недавно объявили войну)</Text>
     </Replace>
     <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_DESCRIPTION" Language="ru_RU">
-      <Text>Добавляет Александра II как альтернативного лидера России.</Text>
+      <Text>Добавляет Александра II как альтернативного лидера России: Императора-Освободителя, отменившего крепостное право.[NEWLINE][NEWLINE]ВЕЛИКИЕ РЕФОРМЫ[NEWLINE][ICON_BULLET] Освобождение крестьян: строители получают +1 заряд, пастбища дают +1 производства, фермы дают +1 производства за каждые 2 соседние фермы.[NEWLINE][ICON_BULLET] Земства: города с назначенным губернатором получают +2 культуры и +4 лояльности; со Средневековья с каждой новой эпохой бонус растет на +1 культуры и +2 лояльности.[NEWLINE][ICON_BULLET] Военная реформа: улучшение юнитов стоит на 50% меньше золота.[NEWLINE][NEWLINE]ПОВЕСТКА «ОСВОБОДИТЕЛЬ»[NEWLINE]Ему нравятся цивилизации, давно не объявлявшие войн, и не нравятся те, что объявили войну недавно.[NEWLINE][NEWLINE]В МОДЕ[NEWLINE][ICON_BULLET] 11 новых названий городов России, столица Санкт-Петербург[NEWLINE][ICON_BULLET] Портрет, иконка, фон загрузки и фон дипломатии[NEWLINE][ICON_BULLET] 31 реплика дипломатии и страница в Цивилопедии[NEWLINE][ICON_BULLET] Тексты на английском и русском языках[NEWLINE][NEWLINE]Требуется Rise and Fall; Gathering Storm рекомендуется (эпоха «Будущее»). Лидер доступен за Россию.[NEWLINE][NEWLINE]Автор: Remsely. Создан при помощи Claude Code (Anthropic).</Text>
     </Replace>
     <Replace Tag="LOC_REMSELY_ALEXANDER_II_MOD_TEASER" Language="ru_RU">
-      <Text>Александр II для России.</Text>
+      <Text>Александр II, Император-Освободитель, для России: Великие реформы, повестка, города, реплики и арт.</Text>
     </Replace>
     <!-- Diplomacy lines: DRAFT, to be proofread (ROADMAP phase 5) -->
     <Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_REMSELY_ALEXANDER_II_ANY" Language="ru_RU">
@@ -185,6 +185,36 @@
       <Text>Томск|Томска|Томску|Томск|Томском|Томске</Text>
       <Gender>masculine</Gender>
       <Plurality>1</Plurality>
+    </Replace>
+    <Replace Tag="LOC_LOADING_INFO_LEADER_REMSELY_ALEXANDER_II" Language="ru_RU">
+      <Text>Добро пожаловать в Зимний дворец, государь Александр. Ваша империя огромна, а ее бремя старо: крестьяне ждут воли, губернии ждут самоуправления, армия ждет перемен. Освободите крестьян, дайте земствам управлять краем, и Россия окрепнет изнутри.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_TITLE" Language="ru_RU">
+      <Text>Александр II</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_SUBTITLE" Language="ru_RU">
+      <Text>Император и самодержец Всероссийский, царь Польский, великий князь Финляндский</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_CAPSULE_BODY" Language="ru_RU">
+      <Text>Россия Александра терпеливо строит свой тыл. Его строители делают больше, фермы и пастбища растут в производительности, а каждый губернатор приносит городу культуру и лояльность.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_DETAILED_BODY" Language="ru_RU">
+      <Text>Бонусы Александра награждают широкую, хорошо управляемую империю. Строители получают лишний [ICON_Charges] заряд, пастбища дают больше [ICON_Production] производства, а сгруппированные фермы добавляют еще. Назначьте в город [ICON_Governor] губернатора, и Земства дадут ему [ICON_Culture] культуру и [ICON_PressureUp] лояльность, которые растут с каждой эпохой, начиная со Средневековья, так что даже пограничные города остаются устойчивыми. Улучшение юнитов стоит вдвое меньше [ICON_Gold] золота: старая армия остается современной, и казна не страдает. Его повестка, «Освободитель», заставляет других лидеров любить правителей, хранящих мир, и не любить тех, кто недавно объявлял войну.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_1" Language="ru_RU">
+      <Text>Александр II (1818-1881) взошел на престол в 1855 году, в разгар Крымской войны. Поражение показало, что огромная, но отсталая империя не сможет удержать свое место в Европе без глубоких перемен. Последовавшие реформы принесли ему имя Царя-Освободителя.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_2" Language="ru_RU">
+      <Text>Главной из них стал Манифест 19 февраля 1861 года, освободивший от крепостной зависимости более двадцати миллионов крестьян. Воля пришла вместе с выкупными платежами и множеством ограничений, и крестьяне остались далеко не всем довольны, но она открыла путь к новой России.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_3" Language="ru_RU">
+      <Text>Дальше реформы изменили само государство. В 1864 году земства дали губерниям и уездам выборное местное самоуправление, а новая судебная система принесла открытые суды и присяжных. В 1874 году военная реформа Дмитрия Милютина ввела всеобщую воинскую повинность и обновила армию.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_4" Language="ru_RU">
+      <Text>За границей Александр завершил долгую Кавказскую войну в 1864 году и продвинул границы империи в Среднюю Азию, взяв Ташкент и Самарканд. В 1867 году он продал Русскую Америку, Аляску, Соединенным Штатам за 7,2 миллиона долларов. Война с Османской империей 1877-1878 годов освободила Болгарию, хотя Берлинский конгресс отнял у России значительную часть успехов.</Text>
+    </Replace>
+    <Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_REMSELY_ALEXANDER_II_CHAPTER_HISTORY_PARA_5" Language="ru_RU">
+      <Text>Реформы устроили не всех. Польское восстание 1863 года было подавлено, а растущее революционное движение обратилось к террору. Александр пережил несколько покушений. 13 марта 1881 года (1 марта по старому стилю) в Петербурге бомба, брошенная членами «Народной воли», смертельно ранила его, и престол перешел к его сыну Александру III.</Text>
     </Replace>
   </LocalizedText>
 </GameData>

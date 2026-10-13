@@ -150,7 +150,28 @@ def check_text(files):
                 err(f"text: {tag} needs <Gender> and <Plurality>")
         if tag in en and sorted(PLACEHOLDER.findall(text)) != sorted(PLACEHOLDER.findall(en[tag][0])):
             err(f"text: {tag} placeholders differ between en_US and ru_RU")
+    check_required_leader_text(set(en) | set(ru))
     return set(en) | set(ru)
+
+
+# Texts a vanilla leader has (checked against the Peter the Great set in DebugLocalization.sqlite): the loading screen looks up
+# LOC_LOADING_INFO_<LeaderType> by itself, the Civilopedia leader page is built from the PEDIA keys below.
+LEADER = "REMSELY_ALEXANDER_II"
+REQUIRED_LEADER_TAGS = [
+    f"LOC_LEADER_{LEADER}_NAME",
+    f"LOC_LOADING_INFO_LEADER_{LEADER}",
+    f"LOC_PEDIA_LEADERS_PAGE_LEADER_{LEADER}_TITLE",
+    f"LOC_PEDIA_LEADERS_PAGE_LEADER_{LEADER}_SUBTITLE",
+    f"LOC_PEDIA_LEADERS_PAGE_LEADER_{LEADER}_CHAPTER_CAPSULE_BODY",
+    f"LOC_PEDIA_LEADERS_PAGE_LEADER_{LEADER}_CHAPTER_DETAILED_BODY",
+    f"LOC_PEDIA_LEADERS_PAGE_LEADER_{LEADER}_CHAPTER_HISTORY_PARA_1",
+]
+
+
+def check_required_leader_text(tags):
+    for tag in REQUIRED_LEADER_TAGS:
+        if tag not in tags:
+            err(f"text: required leader text {tag} is missing")
 
 
 def check_loc_refs(actions, mod_tags):
