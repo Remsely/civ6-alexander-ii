@@ -14,7 +14,7 @@ description: Тексты лидера-мода Civilization VI на англи�
 - Способность и повестка: `LOC_TRAIT_LEADER_*_NAME/DESCRIPTION`, `LOC_AGENDA_*_NAME/DESCRIPTION`, тексты модификаторов повестки (`LOC_DIPLO_MODIFIER_*`).
 - Дипломатия: набор тегов должен покрывать **все ванильные ключи реплик** лидера-образца (у Петра их 33); сверяй по базе, не по памяти.
 - Города: `LOC_CITY_NAME_*` и `CityNames` с `LeaderType` (привязка списка к лидеру в игре не проверена).
-- Описание и тизер мода: `LOC_<MOD>_MOD_DESCRIPTION/TEASER`. Имя в `.modinfo` можно красить `[COLOR_...]...[ENDCOLOR]`, но только цветами из `Civ6_ColorAtlas.xml` (`COLOR_RED`, `COLOR_FLOAT_GOLD`, `COLOR_LIGHTBLUE`...). Цвета палитры игроков (`COLOR_STANDARD_ORANGE_MD`) в тексте дают невидимые буквы; валидатор это ловит. `COLOR_FLOAT_GOLD` занят JFD; голубой `COLOR_LIGHTBLUE` сливается с фоном меню, у нас `COLOR_RED`. Цвет проверяет только глаз в игре.
+- Описание и тизер мода: `LOC_<MOD>_MOD_DESCRIPTION/TEASER`. Имя в `.modinfo` можно красить `[COLOR_...]...[ENDCOLOR]`, но только цветами из `Civ6_ColorAtlas.xml` (`COLOR_FLOAT_CULTURE`, `COLOR_FLOAT_GOLD`, `COLOR_LIGHTBLUE`...). Цвета палитры игроков (`COLOR_STANDARD_ORANGE_MD`) в тексте дают невидимые буквы; валидатор это ловит. `COLOR_FLOAT_GOLD` занят JFD; голубой `COLOR_LIGHTBLUE` сливается с фоном меню, красный `COLOR_RED` - с сообщениями об ошибках; у нас пурпурный `COLOR_FLOAT_CULTURE`. Цвет проверяет только глаз в игре.
 
 ## Правила
 - Без буквы «ё» (как в официальном тексте); префикс `REMSELY` у каждого тега (проверяет валидатор).

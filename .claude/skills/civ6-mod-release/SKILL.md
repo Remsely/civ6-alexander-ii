@@ -13,7 +13,7 @@ description: Выпуск мода Civilization VI: архив для GitHub Rel
 4. `git tag v<версия>`, `git push origin main v<версия>`, `gh release create ... dist/release/*`. **Push, tag и публикация - внешние необратимые действия: только по прямому согласию пользователя.** `gh` может быть не установлен.
 
 ## Описание и оформление
-- Имя в игре: `[COLOR_RED]Remsely's[ENDCOLOR] Alexander II` (цвет из Civ6_ColorAtlas.xml; цвета палитры игроков в тексте невидимы) (`<Name>` в `.modinfo`). Описание и тизер - ключи `LOC_REMSELY_*_MOD_DESCRIPTION/TEASER` в обоих языках, абзацы через `[NEWLINE]`, списки через `[ICON_BULLET]`.
+- Имя в игре: `[COLOR_FLOAT_CULTURE]Remsely's[ENDCOLOR] Alexander II` (цвет из Civ6_ColorAtlas.xml; цвета палитры игроков в тексте невидимы) (`<Name>` в `.modinfo`). Описание и тизер - ключи `LOC_REMSELY_*_MOD_DESCRIPTION/TEASER` в обоих языках, абзацы через `[NEWLINE]`, списки через `[ICON_BULLET]`.
 - Страница Workshop: `workshop/description.bbcode` (`[h1] [h2] [list] [olist]`), `workshop/workshop.json` (`visibility` 2 = скрытый), превью `workshop/preview.png` из `tools\make_preview.py`.
 - GUID мода (`id` в `.modinfo`) между версиями не меняй: по нему игра узнаёт мод.
 - BLP лежат для Windows и macOS (Asset Editor собирает оба, берутся из `Platforms/` проекта ModBuddy). Работу на macOS не проверяли - не обещай её.
