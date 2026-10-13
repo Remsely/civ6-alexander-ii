@@ -26,7 +26,7 @@
 
 ## После получения BLP
 
-1. Добавить в `.modinfo`: действия `UpdateArt` (файл `RemselysAlexanderII.dep`) во FrontEnd и InGame, в `<Files>` - `ArtDefs/*`, `.dep`, `XLPs/*`, `Textures/*.tex`, BLP (Windows, при желании MacOS).
+1. Добавить в `.modinfo`: действия `UpdateArt` (файл `RemselysAlexanderII.dep`) во FrontEnd и InGame, в `<Files>` - `ArtDefs/*`, `.dep`, `XLPs/*`, `Textures/*.tex`, BLP (Windows и MacOS).
 2. `Data/Config.sql`: `Portrait` = `LEADER_REMSELY_ALEXANDER_II_NEUTRAL`.
 3. `Data/GameDefines.sql`: `LoadingInfo.ForegroundImage` = `LEADER_REMSELY_ALEXANDER_II_NEUTRAL`.
 4. `validate.py`, `install.py`, перезапуск игры, проверка: выбор лидера, загрузка, дипломатия.
