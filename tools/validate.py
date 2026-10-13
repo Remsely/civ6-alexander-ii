@@ -56,6 +56,30 @@ def check_files(files, actions):
             err(f"modinfo: {section}/{tag} uses {rel}, which is not in <Files>")
 
 
+COLORS_DIR = ROOT / "reference" / "vanilla" / "Base" / "UI" / "Colors"
+
+
+def build_colors_db(mem) -> None:
+    """In-memory copy of the game's color tables, filled from the vanilla XML (Colors.xml, PlayerStandardColors.xml, PlayerColors.xml).
+    Columns come from the XML itself, so a column the game does not have (e.g. TextColor) fails here as it does in Database.log."""
+    for name, table in (("PlayerStandardColors.xml", "Colors"), ("Colors.xml", "Colors"), ("PlayerColors.xml", "PlayerColors")):
+        path = COLORS_DIR / name
+        if not path.is_file():
+            continue
+        for tbl in etree.parse(str(path)).getroot():
+            rows = [{c.tag: (c.text or "") for c in row} for row in tbl.findall("Row")]
+            if not rows or tbl.tag != table:
+                continue
+            columns = sorted({k for r in rows for k in r}, key=lambda k: (k != "Type", k))
+            mem.execute(f"CREATE TABLE IF NOT EXISTS {tbl.tag} ({', '.join(columns)})")
+            existing = {r[1] for r in mem.execute(f"PRAGMA table_info({tbl.tag})")}
+            for col in columns:
+                if col not in existing:
+                    mem.execute(f"ALTER TABLE {tbl.tag} ADD COLUMN {col}")
+            for r in rows:
+                mem.execute(f"INSERT INTO {tbl.tag} ({', '.join(r)}) VALUES ({', '.join('?' * len(r))})", list(r.values()))
+
+
 def check_sql(actions):
     for section, tag, rel in actions:
         if tag != "UpdateDatabase" and tag != "UpdateColors":
@@ -68,8 +92,11 @@ def check_sql(actions):
             err(f"sql: reference database missing: {src} (see CLAUDE.md, reference/game-db)")
             continue
         mem = sqlite3.connect(":memory:")
-        with sqlite3.connect(src) as disk:
-            disk.backup(mem)
+        if tag == "UpdateColors":
+            build_colors_db(mem)  # the real colors DB (ColorManager) is not in the dumps, and its schema differs
+        else:
+            with sqlite3.connect(src) as disk:
+                disk.backup(mem)
         # The game's triggers call its own hash function; any stable value is fine for validation.
         mem.create_function("Make_Hash", 1, lambda s: zlib.crc32(str(s).encode()))
         mem.execute("PRAGMA foreign_keys = ON")

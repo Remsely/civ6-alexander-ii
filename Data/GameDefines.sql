@@ -14,9 +14,9 @@ INSERT INTO Traits (TraitType, Name, Description) VALUES
 INSERT INTO LeaderTraits (LeaderType, TraitType) VALUES
 		('LEADER_REMSELY_ALEXANDER_II', 'TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS');
 
--- Temporary art: Peter's loading screen
+-- Loading screen: our portrait and background (the study in the Winter Palace)
 INSERT INTO LoadingInfo (LeaderType, ForegroundImage, BackgroundImage, PlayDawnOfManAudio) VALUES
-		('LEADER_REMSELY_ALEXANDER_II', 'LEADER_PETER_GREAT_NEUTRAL', 'LEADER_PETER_GREAT_BACKGROUND', 0);
+		('LEADER_REMSELY_ALEXANDER_II', 'LEADER_REMSELY_ALEXANDER_II_NEUTRAL', 'LEADER_REMSELY_ALEXANDER_II_BACKGROUND', 0);
 
 INSERT INTO CivilizationLeaders (CivilizationType, LeaderType, CapitalName) VALUES
 		('CIVILIZATION_RUSSIA', 'LEADER_REMSELY_ALEXANDER_II', 'LOC_CITY_NAME_ST_PETERSBURG');
@@ -48,7 +48,7 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 --------------------------------------------------------------------------------------------------------------------------
 -- 3.2 Zemstvo: cities with an assigned Governor get Culture and Loyalty, growing with the player's era.
 -- Cumulative steps: each era adds its delta once the player's era is at least that era (totals match the design doc table).
--- Ancient and Classical share the base step. "Assigned" = REQUIRES_CITY_WITH_ASSIGNED_GOVERNOR (Established=0, counts a Governor
+-- Ancient and Classical share the base step (+2 Culture/+4 Loyalty); from Medieval each era adds +1 Culture and +2 Loyalty. "Assigned" = REQUIRES_CITY_WITH_ASSIGNED_GOVERNOR (Established=0, counts a Governor
 -- who is still establishing); switch to CITY_HAS_GOVERNOR_FOUNDED-style sets if only established Governors should count.
 -- ERA_FUTURE exists only in Gathering Storm; without it the last step simply never triggers.
 -- Types: Governor check as in GOV_TALL_FOOD_BUFF, culture as in GOV_TALL_FOOD_BUFF (CITY_YIELD_CHANGE), loyalty as in COLOSSEUM_IDENTITY.
@@ -116,22 +116,22 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 		('REMSELY_ZEMSTVO_MEDIEVAL_LOYALTY', 'Amount', '2'),
 		('REMSELY_ZEMSTVO_RENAISSANCE_CULTURE', 'YieldType', 'YIELD_CULTURE'),
 		('REMSELY_ZEMSTVO_RENAISSANCE_CULTURE', 'Amount', '1'),
-		('REMSELY_ZEMSTVO_RENAISSANCE_LOYALTY', 'Amount', '1'),
+		('REMSELY_ZEMSTVO_RENAISSANCE_LOYALTY', 'Amount', '2'),
 		('REMSELY_ZEMSTVO_INDUSTRIAL_CULTURE', 'YieldType', 'YIELD_CULTURE'),
 		('REMSELY_ZEMSTVO_INDUSTRIAL_CULTURE', 'Amount', '1'),
-		('REMSELY_ZEMSTVO_INDUSTRIAL_LOYALTY', 'Amount', '1'),
+		('REMSELY_ZEMSTVO_INDUSTRIAL_LOYALTY', 'Amount', '2'),
 		('REMSELY_ZEMSTVO_MODERN_CULTURE', 'YieldType', 'YIELD_CULTURE'),
 		('REMSELY_ZEMSTVO_MODERN_CULTURE', 'Amount', '1'),
-		('REMSELY_ZEMSTVO_MODERN_LOYALTY', 'Amount', '1'),
+		('REMSELY_ZEMSTVO_MODERN_LOYALTY', 'Amount', '2'),
 		('REMSELY_ZEMSTVO_ATOMIC_CULTURE', 'YieldType', 'YIELD_CULTURE'),
 		('REMSELY_ZEMSTVO_ATOMIC_CULTURE', 'Amount', '1'),
-		('REMSELY_ZEMSTVO_ATOMIC_LOYALTY', 'Amount', '1'),
+		('REMSELY_ZEMSTVO_ATOMIC_LOYALTY', 'Amount', '2'),
 		('REMSELY_ZEMSTVO_INFORMATION_CULTURE', 'YieldType', 'YIELD_CULTURE'),
 		('REMSELY_ZEMSTVO_INFORMATION_CULTURE', 'Amount', '1'),
-		('REMSELY_ZEMSTVO_INFORMATION_LOYALTY', 'Amount', '1'),
+		('REMSELY_ZEMSTVO_INFORMATION_LOYALTY', 'Amount', '2'),
 		('REMSELY_ZEMSTVO_FUTURE_CULTURE', 'YieldType', 'YIELD_CULTURE'),
 		('REMSELY_ZEMSTVO_FUTURE_CULTURE', 'Amount', '1'),
-		('REMSELY_ZEMSTVO_FUTURE_LOYALTY', 'Amount', '1');
+		('REMSELY_ZEMSTVO_FUTURE_LOYALTY', 'Amount', '2');
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_ZEMSTVO_ANCIENT_CULTURE'),
 		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_ZEMSTVO_ANCIENT_LOYALTY'),
@@ -151,36 +151,36 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_ZEMSTVO_FUTURE_LOYALTY');
 
 --------------------------------------------------------------------------------------------------------------------------
--- 3.1 Farm adjacency: +1 Production per 3 adjacent Farms (max +2). Counted by Lua/RemselysAlexanderII_Farms.lua, which sets the
+-- 3.1 Farm adjacency: +1 Production per 2 adjacent Farms (max +2 at 4). Counted by Lua/RemselysAlexanderII_Farms.lua, which sets the
 -- plot properties below; the modifiers only read them. Pattern: Sukritact's Al-Hasan (Jahazi) plot property + MODIFIER_PLAYER_ADJUST_PLOT_YIELD.
 --------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Requirements (RequirementId, RequirementType) VALUES
-		('REMSELY_REQUIRES_FARM_ADJ_3', 'REQUIREMENT_PLOT_PROPERTY_MATCHES'),
-		('REMSELY_REQUIRES_FARM_ADJ_6', 'REQUIREMENT_PLOT_PROPERTY_MATCHES');
+		('REMSELY_REQUIRES_FARM_ADJ_2', 'REQUIREMENT_PLOT_PROPERTY_MATCHES'),
+		('REMSELY_REQUIRES_FARM_ADJ_4', 'REQUIREMENT_PLOT_PROPERTY_MATCHES');
 INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
-		('REMSELY_REQUIRES_FARM_ADJ_3', 'PropertyName',    'REMSELY_FARM_ADJ_3'),
-		('REMSELY_REQUIRES_FARM_ADJ_3', 'PropertyMinimum', '1'),
-		('REMSELY_REQUIRES_FARM_ADJ_6', 'PropertyName',    'REMSELY_FARM_ADJ_6'),
-		('REMSELY_REQUIRES_FARM_ADJ_6', 'PropertyMinimum', '1');
+		('REMSELY_REQUIRES_FARM_ADJ_2', 'PropertyName',    'REMSELY_FARM_ADJ_2'),
+		('REMSELY_REQUIRES_FARM_ADJ_2', 'PropertyMinimum', '1'),
+		('REMSELY_REQUIRES_FARM_ADJ_4', 'PropertyName',    'REMSELY_FARM_ADJ_4'),
+		('REMSELY_REQUIRES_FARM_ADJ_4', 'PropertyMinimum', '1');
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
-		('REMSELY_PLOT_FARM_ADJ_3_REQUIREMENTS', 'REQUIREMENTSET_TEST_ALL'),
-		('REMSELY_PLOT_FARM_ADJ_6_REQUIREMENTS', 'REQUIREMENTSET_TEST_ALL');
+		('REMSELY_PLOT_FARM_ADJ_2_REQUIREMENTS', 'REQUIREMENTSET_TEST_ALL'),
+		('REMSELY_PLOT_FARM_ADJ_4_REQUIREMENTS', 'REQUIREMENTSET_TEST_ALL');
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
-		('REMSELY_PLOT_FARM_ADJ_3_REQUIREMENTS', 'REQUIRES_PLOT_HAS_FARM'),
-		('REMSELY_PLOT_FARM_ADJ_3_REQUIREMENTS', 'REMSELY_REQUIRES_FARM_ADJ_3'),
-		('REMSELY_PLOT_FARM_ADJ_6_REQUIREMENTS', 'REQUIRES_PLOT_HAS_FARM'),
-		('REMSELY_PLOT_FARM_ADJ_6_REQUIREMENTS', 'REMSELY_REQUIRES_FARM_ADJ_6');
+		('REMSELY_PLOT_FARM_ADJ_2_REQUIREMENTS', 'REQUIRES_PLOT_HAS_FARM'),
+		('REMSELY_PLOT_FARM_ADJ_2_REQUIREMENTS', 'REMSELY_REQUIRES_FARM_ADJ_2'),
+		('REMSELY_PLOT_FARM_ADJ_4_REQUIREMENTS', 'REQUIRES_PLOT_HAS_FARM'),
+		('REMSELY_PLOT_FARM_ADJ_4_REQUIREMENTS', 'REMSELY_REQUIRES_FARM_ADJ_4');
 INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
-		('REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'REMSELY_PLOT_FARM_ADJ_3_REQUIREMENTS'),
-		('REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'REMSELY_PLOT_FARM_ADJ_6_REQUIREMENTS');
+		('REMSELY_REFORMS_FARM_ADJ_2_PRODUCTION', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'REMSELY_PLOT_FARM_ADJ_2_REQUIREMENTS'),
+		('REMSELY_REFORMS_FARM_ADJ_4_PRODUCTION', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'REMSELY_PLOT_FARM_ADJ_4_REQUIREMENTS');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-		('REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION'),
-		('REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION', 'Amount',    '1'),
-		('REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION'),
-		('REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION', 'Amount',    '1');
+		('REMSELY_REFORMS_FARM_ADJ_2_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION'),
+		('REMSELY_REFORMS_FARM_ADJ_2_PRODUCTION', 'Amount',    '1'),
+		('REMSELY_REFORMS_FARM_ADJ_4_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION'),
+		('REMSELY_REFORMS_FARM_ADJ_4_PRODUCTION', 'Amount',    '1');
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
-		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_REFORMS_FARM_ADJ_3_PRODUCTION'),
-		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_REFORMS_FARM_ADJ_6_PRODUCTION');
+		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_REFORMS_FARM_ADJ_2_PRODUCTION'),
+		('TRAIT_LEADER_REMSELY_ALEXANDER_II_REFORMS', 'REMSELY_REFORMS_FARM_ADJ_4_PRODUCTION');
 
 --==========================================================================================================================
 -- AGENDA: The Liberator (docs/remselys-alexander-ii.md, 4)

@@ -18,6 +18,12 @@
       </Properties>
       <File>Data/Config.sql</File>
     </UpdateDatabase>
+    <UpdateIcons id="REMSELY_FrontEnd_Icons">
+      <File>Data/Icons.sql</File>
+    </UpdateIcons>
+    <UpdateArt id="REMSELY_FrontEnd_Art">
+      <File>RemselysAlexanderII.dep</File>
+    </UpdateArt>
     <UpdateText id="REMSELY_FrontEnd_Text">
       <File>Text/en_US.xml</File>
       <File>Text/ru_RU.xml</File>
@@ -33,6 +39,12 @@
       </Properties>
       <File>Data/GameDefines.sql</File>
     </UpdateDatabase>
+    <UpdateIcons id="REMSELY_InGame_Icons">
+      <File>Data/Icons.sql</File>
+    </UpdateIcons>
+    <UpdateArt id="REMSELY_InGame_Art">
+      <File>RemselysAlexanderII.dep</File>
+    </UpdateArt>
     <UpdateText id="REMSELY_InGame_Text">
       <File>Text/en_US.xml</File>
       <File>Text/ru_RU.xml</File>
@@ -51,8 +63,41 @@
     <File>Data/Config.sql</File>
     <File>Data/Colors.sql</File>
     <File>Data/GameDefines.sql</File>
+    <File>Data/Icons.sql</File>
     <File>Lua/RemselysAlexanderII_Farms.lua</File>
     <File>Text/en_US.xml</File>
     <File>Text/ru_RU.xml</File>
+    <File>Textures/RemselysAlexanderII_Icon256.dds</File>
+    <File>Textures/RemselysAlexanderII_Icon80.dds</File>
+    <File>Textures/RemselysAlexanderII_Icon64.dds</File>
+    <File>Textures/RemselysAlexanderII_Icon55.dds</File>
+    <File>Textures/RemselysAlexanderII_Icon50.dds</File>
+    <File>Textures/RemselysAlexanderII_Icon48.dds</File>
+    <File>Textures/RemselysAlexanderII_Icon45.dds</File>
+    <File>Textures/RemselysAlexanderII_Icon32.dds</File>
+    <File>ArtDefs/FallbackLeaders.artdef</File>
+    <File>ArtDefs/Leaders.artdef</File>
+    <File>ArtDefs/UserInterface.artdef</File>
+    <File>Platforms/Windows/BLPs/LeaderFallbacks.blp</File>
+    <File>Platforms/Windows/BLPs/UI/Icons.blp</File>
+    <File>RemselysAlexanderII.dep</File>
+    <File>XLPs/Icons.xlp</File>
+    <File>XLPs/LeaderFallbacks.xlp</File>
+    <File>Textures/LEADER_REMSELY_ALEXANDER_II_NEUTRAL.tex</File>
+    <File>Textures/FALLBACK_NEUTRAL_REMSELY_ALEXANDER_II.tex</File>
+    <File>Textures/RemselysAlexanderII_Icon256.tex</File>
+    <File>Textures/RemselysAlexanderII_Icon80.tex</File>
+    <File>Textures/RemselysAlexanderII_Icon64.tex</File>
+    <File>Textures/RemselysAlexanderII_Icon55.tex</File>
+    <File>Textures/RemselysAlexanderII_Icon50.tex</File>
+    <File>Textures/RemselysAlexanderII_Icon48.tex</File>
+    <File>Textures/RemselysAlexanderII_Icon45.tex</File>
+    <File>Textures/RemselysAlexanderII_Icon32.tex</File>
+    <File>Textures/LEADER_REMSELY_ALEXANDER_II_NEUTRAL.dds</File>
+    <File>Textures/FALLBACK_NEUTRAL_REMSELY_ALEXANDER_II.dds</File>
+    <File>Textures/LEADER_REMSELY_ALEXANDER_II_SELECT.tex</File>
+    <File>Textures/LEADER_REMSELY_ALEXANDER_II_SELECT.dds</File>
+    <File>Textures/LEADER_REMSELY_ALEXANDER_II_BACKGROUND.tex</File>
+    <File>Textures/LEADER_REMSELY_ALEXANDER_II_BACKGROUND.dds</File>
   </Files>
 </Mod>
