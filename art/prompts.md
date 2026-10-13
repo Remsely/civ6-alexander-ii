@@ -26,21 +26,23 @@ ivory parchment with gold ink borders and thin black coastlines, imperial double
 as a faint watermark, dark vignette, soft light from above, nothing in the center.
 ```
 
-## 2. Фон экрана загрузки (горизонтальный, 16:9, слева или справа оставить свободное место под лидера)
+## 2. Фон экрана загрузки (горизонтальный, ~1920x955)
+
+Реальный макет (по скриншотам из игры): слева узкая полоса (~23% ширины) остаётся видимой, посередине полупрозрачная панель с текстом (23-54%), справа стоит лидер (60-93%). Самое интересное (окно, свечи, стол) держать в левой полосе, а правую часть делать тёмной и спокойной: на ней стоит портрет. Готовая картинка из `cabinet.png` отзеркалена скриптом для этого.
 
 **2a. Кабинет в Зимнем дворце (композиция A)**
 ```
 16:9 wide. Interior of the emperor's study in the Winter Palace, Saint Petersburg, 1861.
 A large desk with a sealed manifesto and a quill, bookshelves, a tall window showing a frozen Neva river
 and the golden spire of the Peter and Paul Cathedral in cold winter light, warm candle glow inside,
-black, gold and ivory colors. Left third of the image calm and empty.
+black, gold and ivory colors. Right half of the image calm and dark (a figure will stand there).
 ```
 
 **2b. Дворцовая площадь зимой (композиция B)**
 ```
 16:9 wide. Palace Square in Saint Petersburg in winter, 1860s. The Alexander Column and the curved
 General Staff Building, light snowfall, low golden sun, long soft shadows, cold blue sky,
-empty square without people. Right third of the image calm and empty.
+empty square without people. Right half of the image calm and dark (a figure will stand there).
 ```
 
 **2c. Русская Америка (композиция C)**
@@ -52,7 +54,7 @@ a snowy mountain coast visible through a window. Black, gold and ivory colors.
 
 ## 3. Фон для экрана дипломатии (горизонтальный, 16:9, тёмный)
 
-Лидер стоит справа (примерно на 3/4 ширины экрана), края должны уходить в чёрный: у ванильных сцен вокруг тёмная виньетка.
+Лидер стоит по центру на 3/4 ширины экрана, слева лежит белый текст описания, поэтому левая часть должна быть тёмной и спокойной. Скрипт растягивает картинку на всю ширину экрана и дополнительно затемняет левый край.
 ```
 16:9 wide. Dark palace interior, a blurred out-of-focus background: tall windows with winter light,
 gold-trimmed columns and heavy curtains, deep black vignette fading to pure black at all edges,
