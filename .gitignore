@@ -15,6 +15,7 @@ __pycache__/
 
 # ModBuddy
 *.suo
+*.civ6suo
 *.user
 obj/
 bin/
@@ -26,3 +27,15 @@ dist/
 # Скриншоты из игры и промежуточные результаты нарезки (воспроизводятся tools/slice_art.py)
 art/*.png
 art/build/
+
+# Сбои и логи инструментов
+hs_err_pid*.log
+cooker.log
+
+# Blender: тяжёлые исходники (сотни МБ, лимит GitHub 100 МБ) и резервные копии
+*.blend
+*.blend1
+*.glb
+
+# BLP 3D-лидера: собирает tools/build.py, пока в них временные текстуры Петра
+mod/Platforms/*/BLPs/leaders/
